@@ -15,6 +15,8 @@
 # int a'[n]: the rotated array
 
 
+
+# solutuon
 def left_rotate(a):
     if len(a) == 0:
         return a
