@@ -1,4 +1,4 @@
-HackerRank Solutions in Python
+##HackerRank Solutions in Python
 Overview
 This repository contains my solutions to various coding problems on HackerRank. Each solution is written in Python and includes detailed comments to explain the logic and approach used to solve the problem. The goal of this repository is to demonstrate problem-solving skills, algorithmic thinking, and proficiency in Python programming.
 
