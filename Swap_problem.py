@@ -16,6 +16,3 @@ def minimumSwaps(arr):
         if cyclic_size>0:
             count+=cyclic_size-1
     return count
-arr=[4,3,1,2]
-output=minimumSwaps(arr)
-print(output)    
