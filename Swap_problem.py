@@ -1,15 +1,21 @@
 def minimumSwaps(arr):
+    n=len(arr)
+    arrpos=list(enumerate(arr))
+    arrpos.sort(key=lambda it: it[1])
+    visited={k:False for k in range(n) }
     count=0
-    for i in range(len(arr)-1):
-        for j in range (len(arr)-1):
-
-            if(arr[j]>arr[j+1]):
-                temp=arr[j]
-                arr[j]=arr[j+1]
-                arr[j+1]=temp
-                count+=1
-        print(arr)
+    for i in range(n):
+        if visited[i]or arrpos[i][0]==i:
+            continue
+        cyclic_size=0
+        j=i
+        while not visited[j]:
+            visited[j]=True
+            j=arrpos[j][0]
+            cyclic_size+=1
+        if cyclic_size>0:
+            count+=cyclic_size-1
     return count
-arry=[4,3,1,2]
-output=minimumSwaps(arry)
-print(output)
+arr=[4,3,1,2]
+output=minimumSwaps(arr)
+print(output)    
